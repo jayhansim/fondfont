@@ -1,6 +1,6 @@
 // Google Font Load
 WebFontConfig = {
-  google: { families: [ 'Titillium+Web:400,700:latin' ] }
+  google: { families: [ 'Work+Sans:400,600:latin' ] }
 };
 (function() {
   var wf = document.createElement('script');
@@ -12,27 +12,5 @@ WebFontConfig = {
   s.parentNode.insertBefore(wf, s);
 })();
 
-// menu
-var cat = $('#menu-cat'),
-    search = $('#menu-search');
 
-cat.on('click', function(e){
-  var id = $(this).attr('href');
-  $(id).slideToggle();
-
-  if($('#search').is(':visible')) {
-    $('#search').slideUp();
-  }
-  e.preventDefault();
-});
-
-search.on('click', function(e){
-  var id = $(this).attr('href');
-  $(id).slideToggle();
-
-  if($('#categories').is(':visible')) {
-    $('#categories').slideUp();
-  }
-  e.preventDefault();
-});
 

@@ -1,4 +1,4 @@
-<main role="main" id="main">
+
   <?php /* If this is a category archive */ if (is_category()) { ?>
     <h1><?php printf(__('%s Fonts'), single_cat_title('', false)); ?></h1>
   <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
@@ -28,20 +28,37 @@
   					);
             $thumbID = get_the_post_thumbnail( $post->ID, 'background', $imgsrcparam ); ?>
 
-      <div class="preview">
-        <a href="<?php the_permalink() ?>"><?php echo "$thumbID"; ?></a>
+      <div class="article__image">
+        <a href="<?php the_permalink() ?>">
+          <?php echo "$thumbID"; ?>
+        </a>
       </div>
       <?php } else {?>
-      <div class="preview"><a href="<?php the_permalink() ?>"><img src="<?php bloginfo('template_url'); ?>/images/default-thumbnail.jpg" alt="<?php the_title(); ?>" /></a></div>
+      <div class="article__image">
+        <a href="<?php the_permalink() ?>">
+          <img src="<?php bloginfo('template_url'); ?>/images/default-thumbnail.jpg" alt="<?php the_title(); ?>" />
+        </a>
+      </div>
       <?php } ?>
 
-      <div class="article-over">
-        <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+      <div class="article__content">
+        <h2 class="article__title entry-title">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </h2>
+
+        <div class="article__time">
+          <?php the_time('j.F.Y'); ?>
+        </div>
+
         <?php the_excerpt(); ?>
 
-          <!--<div class="shortcut-download">
-            <a href="<?php echo get_post_meta($post->ID,'link',true) ?>" target="_blank">Download</a>
-          </div>-->
+        <div class="article__cat">
+          <?php the_category(''); ?>
+        </div>
+
+
         </div>
       </li>
       <?php endwhile; ?>
@@ -50,15 +67,4 @@
       <?php endif; ?>
     </ul>
 
-  <div class="ad ad--leaderboard">
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-8642281896248767"
-       data-ad-slot="2461358502"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  </div>
-
-  <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
-</main>
+    <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
