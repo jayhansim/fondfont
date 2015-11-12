@@ -18,48 +18,33 @@
   </main>
 
 
-  <footer  class="footer" role="contentinfo">
-
-
-    <div class="container">
-      <ul class="footer__top">
-        <li>
-          <?php dynamic_sidebar('footer-left'); ?>
-        </li>
-        <li>
-          <?php dynamic_sidebar('footer-center'); ?>
-        </li>
-        <li>
-          <?php dynamic_sidebar('footer-right'); ?>
-        </li>
-      </ul>
-
-      <div class="footer__nav">
-        <ul>
-          <li><a href="<?php bloginfo("url"); ?>/" title=""<?php if ( is_front_page()) { ?> class="active"<?php } ?>>Home</a></li>
-          <?php
-            if ( function_exists( 'wp_nav_menu' ) ) {
-            wp_nav_menu( array( 'theme_location' => 'custom-menu' , 'container' => '' , 'fallback_cb'=> 'custom_menu' , 'depth' => 1 ) ); }
-          else
-            { custom_menu(); }
-          ?>
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container">
+        <ul class="footer__top__menu">
+          <li>
+            <?php dynamic_sidebar('footer-left'); ?>
+          </li>
+          <li>
+            <?php dynamic_sidebar('footer-center'); ?>
+          </li>
+          <li>
+            <?php dynamic_sidebar('footer-right'); ?>
+          </li>
+          <li>
+            <?php dynamic_sidebar('footer-search'); ?>
+          </li>
         </ul>
-
-      </div>
-
-      <div class="footer__bottom">
-        <h3 class="footer__title"><a href="/">FondFont</a></h3>
-        <p>FondFont gathers the best fonts and web fonts that are free to download in one site and present it in a most original and graphical way. Fonts here are handpicked from sites like Behance, Dribbble, Google Fonts and more.</p>
-        <div id="copyright">&copy; <?php the_time(__('Y')) ?> <?php bloginfo('name'); ?>. All Rights Reserved.</div>
       </div>
     </div>
 
-
-
-
-
-
-
+    <div class="footer__bottom">
+      <div class="container">
+        <a href="<?php bloginfo("url"); ?>/" class="logo logo--footer"><?php bloginfo("name"); ?></a>
+        <p>FondFont gathers the best fonts and web fonts that are free to download in one site and present it in a most original and graphical way. Fonts here are handpicked from sites like Behance, Dribbble, Google Fonts and more.</p>
+        <p id="copyright">&copy; <?php the_time(__('Y')) ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
 
 

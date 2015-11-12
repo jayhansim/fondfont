@@ -1,4 +1,9 @@
 
+  <?php get_template_part('titlebar'); ?>
+
+  <main class="main" role="main">
+    <div class="container">
+
   <?php /* If this is a category archive */ if (is_category()) { ?>
     <h1><?php printf(__('%s Fonts'), single_cat_title('', false)); ?></h1>
   <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>

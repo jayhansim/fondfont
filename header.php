@@ -36,16 +36,6 @@
 
   </header>
 
-  <div class="title-bar">
-    <div class="container">
-      <?php if(is_home()): ?>
-        Latest font news
-      <?php else : ?>
-        Fondfont
-      <?php endif; ?>
-    </div>
-  </div>
-
 
   <!-- <nav role="navigation" id="menu">
     <div id="cats">
@@ -90,5 +80,4 @@
     </div>
   </div>-->
 
-  <main class="main" role="main">
-    <div class="container">
+

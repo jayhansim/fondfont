@@ -3,10 +3,22 @@
 // = Sidebar =
 // ===========
 if ( function_exists('register_sidebar') )
-    register_sidebar();
+  register_sidebar(array(
+  	'before_title'  => '<h3 class="aside-title">',
+  	'after_title'   => '</h3>',
+  ));
 
 function fjf_widgets() {
 
+	register_sidebar( array(
+    'name'          => __( 'Footer Left' ),
+    'id'            => 'footer-left',
+    'description'   => __( 'Footer Left.' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="aside-title">',
+    'after_title'   => '</h4>',
+  ) );
   register_sidebar( array(
     'name'          => __( 'Footer Left' ),
     'id'            => 'footer-left',
@@ -29,6 +41,15 @@ function fjf_widgets() {
     'name'          => __( 'Footer Right' ),
     'id'            => 'footer-right',
     'description'   => __( 'Footer Right.' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="aside-title">',
+    'after_title'   => '</h4>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer Search' ),
+    'id'            => 'footer-search',
+    'description'   => __( 'Footer Search.' ),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h4 class="aside-title">',

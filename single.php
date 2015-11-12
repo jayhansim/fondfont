@@ -1,47 +1,49 @@
 <?php get_header(); ?>
-<!-- -->
-  <main role="main" id="main">
 
-    <div class="entry">
-      <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-      <h1><?php the_title(); ?></h1>
-      <div class="entry-featured-image">
-        <?php echo get_post_meta($post->ID, 'full_image', true); ?>
-      </div>
-      <div class="article" id="post-<?php the_ID(); ?>">
+  <?php get_template_part('titlebar'); ?>
 
-        <?php the_content(); ?>
+  <main class="main" role="main">
+    <div class="container">
+      <div class="content__main">
+        <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 
-<div class="ad ad--insidepost">
-<!-- FF - MidRec -->
-<ins class="adsbygoogle"
-style="display:inline-block;width:300px;height:250px"
-data-ad-client="ca-pub-8642281896248767"
-data-ad-slot="4259793707"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></div>
+        <div class="article__content" id="post-<?php the_ID(); ?>">
 
-        <div class="article-download-link">
-          <a href="<?php echo get_post_meta($post->ID, 'link', true) ?>" target="_blank">Download</a>
+          <?php the_content(); ?>
+
+          <div class="font__download">
+            <a href="<?php the_field('link'); ?>" class="btn btn-download" target="_blank">Download <?php the_title(); ?></a>
+          </div>
+
+          <?php if(get_field('full_image')) : ?>
+            <div class="entry-featured-image">
+              <h2>Font previews</h2>
+              <?php the_field('full_image'); ?>
+            </div>
+          <?php endif; ?>
+
+          <div class="postmetadata">
+            <?php // the_tags(__('<span>Tag:</span>') . ' ', ', ', '<br />'); ?>
+            <?php //echo get_the_term_list( $post->ID,'style', 'Style: ', ' ',' ',' '); ?>
+          </div>
+
+
         </div>
-
-        <div class="postmetadata">
-          <?php printf(__('<span>Category:</span> %s'), get_the_category_list(', ')); ?><br />
-          <?php the_tags(__('<span>Tag:</span>') . ' ', ', ', '<br />'); ?>
-          <?php echo get_the_term_list( $post->ID,'style', 'Style: ', ' ',' ',' '); ?>
-        </div>
-
-
+        <?php endwhile; ?>
+        <?php else : ?>
+        <h1 id="error"><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
+        <?php endif; ?>
       </div>
-      <?php endwhile; ?>
-      <?php else : ?>
-      <h1 id="error"><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
-      <?php endif; ?>
 
-    <?php get_sidebar(); ?>
+      <div class="content__side">
+        <?php get_sidebar(); ?>
+      </div>
 
-  </div>
-  </main>
+
+
+
+
+
+
 
 <?php get_footer(); ?>
