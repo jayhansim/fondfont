@@ -1,19 +1,3 @@
-      <?php if(is_single()):?>
-      <div class="ad ad--leaderboard">
-        <div class="container">
-          <!-- FF- leaderboard -->
-          <ins class="adsbygoogle"
-               style="display:inline-block;width:728px;height:90px"
-               data-ad-client="ca-pub-8642281896248767"
-               data-ad-slot="3980592108"></ins>
-          <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-
-        </div>
-      </div>
-      <?php endif; ?>
-
     </div>
   </main>
 

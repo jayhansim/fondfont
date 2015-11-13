@@ -59,6 +59,19 @@ function fjf_widgets() {
 add_action( 'widgets_init', 'fjf_widgets' );
 
 // ====================================
+// = Add Category class to body class  =
+// ====================================
+function category_id_class( $classes ) {
+	global $post;
+	foreach ( get_the_category( $post->ID ) as $category ) {
+		$classes[] = $category->category_nicename;
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'category_id_class' );
+add_filter( 'body_class', 'category_id_class' );
+
+// ====================================
 // = WordPress 2.9+ Thumbnail Support =
 // ====================================
 add_theme_support( 'post-thumbnails' );
