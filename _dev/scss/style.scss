@@ -186,10 +186,6 @@ img {
 		span {
 			color: $color-lighter;
 		}
-
-		@media (max-width: $screen-sm-max) {
-			text-align: center;
-		}
 	}
 
 	.deals.single & {
@@ -222,6 +218,10 @@ img {
 				}
 			}
 		}
+	}
+
+	@media (max-width: $screen-sm-max) {
+		text-align: center;
 	}
 }
 
@@ -353,7 +353,7 @@ h2.article__title {
 	font-family: $font;
 	margin-bottom: 0;
 
-	@media (min-width: $screen-sm) {
+	@media (min-width: $screen-md) {
 		.single.deals & {
 			padding-right: 100px;
 		}
@@ -464,7 +464,7 @@ h2.article__title {
 		line-height: 72px;
 		font-size: 21px;
 
-		@media (max-width: $screen-sm - 1px) {
+		@media (max-width: $screen-sm-max) {
 			display: none;
 		}
 	}
