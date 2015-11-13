@@ -352,6 +352,13 @@ h2.article__title {
 .article__title {
 	font-family: $font;
 	margin-bottom: 0;
+
+	@media (min-width: $screen-sm) {
+		.single.deals & {
+			padding-right: 100px;
+		}
+	}
+
 }
 
 .font__info {
@@ -447,7 +454,7 @@ h2.article__title {
 
 	.title-bar & {
 		position: absolute;
-		right: 0;
+		right: $margin*2;
 		top: 50%;
 		@include transform(translateY(-50%));
 		background-color: #fff;
@@ -456,6 +463,10 @@ h2.article__title {
 		height: 72px;
 		line-height: 72px;
 		font-size: 21px;
+
+		@media (max-width: $screen-sm - 1px) {
+			display: none;
+		}
 	}
 }
 
