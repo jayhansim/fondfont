@@ -45,14 +45,14 @@
 
           <?php if(get_field('full_image')) : ?>
             <div class="font__featured-image">
-              <h2>Font previews</h2>
+              <h2>Sample previews</h2>
               <?php the_field('full_image'); ?>
             </div>
           <?php endif; ?>
 
           <?php if(get_field('fontbook_preview')) : ?>
             <div class="font__featured-image">
-              <h2>Font previews</h2>
+              <h2>Characters preview</h2>
               <img class="wp-image" alt="<?php the_title(); ?>" src="<?php the_field('fontbook_preview'); ?>">
             </div>
           <?php endif; ?>
