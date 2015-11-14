@@ -13,7 +13,7 @@
     					'alt'	=> trim(strip_tags( $post->post_excerpt )),
     					'title'	=> trim(strip_tags( $post->post_title )),
     					);
-              $thumbID = get_the_post_thumbnail( $post->ID, 'background', $imgsrcparam ); ?>
+              $thumbID = get_the_post_thumbnail( $post->ID, 'full', $imgsrcparam ); ?>
 
         <div class="article__image">
           <?php if(in_category('deals')): ?>
