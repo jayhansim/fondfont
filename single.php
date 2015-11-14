@@ -16,7 +16,9 @@
               <li><strong>Designer:</strong> <?php the_field('designer'); ?></li>
               <li><strong>Styles:</strong> <?php the_field('styles'); ?></li>
               <li><strong>Category:</strong> <?php the_category(', '); ?></li>
-              <li><strong>Tag:</strong> <?php echo get_the_term_list( $post->ID,'style', '', ' ',' ',' '); ?></li>
+              <?php if(has_tag()) : ?>
+              <li><?php the_tags('<strong>Tags:</strong> ', ', '); ?></li>
+              <?php endif; ?>
             </ul>
           <?php endif; ?>
 
