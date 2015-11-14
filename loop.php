@@ -64,4 +64,17 @@
         <?php endif; ?>
       </ul>
 
+      <div class="ad ad__leaderboard ad__leaderboard--bottom">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- FF - Leaderboard Responsive -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8642281896248767"
+             data-ad-slot="8464730509"
+             data-ad-format="horizontal"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
       <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>

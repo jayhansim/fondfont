@@ -106,3 +106,16 @@
     <?php endif; ?>
   </div>
 </div>
+
+<div class="ad ad__leaderboard">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- FF - Leaderboard Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-8642281896248767"
+       data-ad-slot="8464730509"
+       data-ad-format="horizontal"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
