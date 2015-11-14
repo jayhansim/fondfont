@@ -118,7 +118,7 @@ img {
 	padding-bottom: $margin*3;
 	border-bottom: 1px solid #ddd;
 
-	@media (min-width: $screen-md) {
+	@media (min-width: $screen-lg) {
 		float: left;
 		@include calc(width, '100% - 330px');
 		margin-bottom: 0;
@@ -128,7 +128,7 @@ img {
 }
 
 .content__side {
-	@media (min-width: $screen-md) {
+	@media (min-width: $screen-lg) {
 		float: right;
 		width: 300px;
 	}
