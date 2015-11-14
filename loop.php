@@ -65,6 +65,7 @@
       </ul>
 
       <div class="ad ad__leaderboard ad__leaderboard--bottom">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- FF - Leaderboard Responsive -->
         <ins class="adsbygoogle"
              style="display:block"
