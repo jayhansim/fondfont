@@ -737,6 +737,10 @@ h2.article__title {
 .ad__leaderboard {
 	margin: $margin*2 0;
 	text-align: center;
+
+	&--bottom {
+		margin-top: 0;
+	}
 }
 
 
